@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mobil Audi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            margin: 0 auto;
+            width: 80%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            margin: 0 10px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav-links {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Mobil Audi</h1>
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Mileage</th>
+            <th>Tax</th>
+            <th>MPG</th>
+            <th>Engine Size</th>
+            <th>Price</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row['year'] }}</td>
+            <td>{{ row['mileage'] }}</td>
+            <td>{{ row['tax'] }}</td>
+            <td>{{ row['mpg'] }}</td>
+            <td>{{ row['engineSize'] }}</td>
+            <td>{{ row['price'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="nav-links">
+        <a href="/">Home</a> | <a href="/addrec">Add Record</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Mobil</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        /* Form Styles */
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Navigation Links */
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            margin: 0 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tambah Data Mobil Audi</h1>
+    <form action="/addrec" method="post">
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" required>
+
+        <label for="mileage">Mileage:</label>
+        <input type="number" id="mileage" name="mileage" required>
+
+        <label for="tax">Tax:</label>
+        <input type="number" id="tax" name="tax" required>
+
+        <label for="mpg">MPG:</label>
+        <input type="number" id="mpg" name="mpg" step="0.1" required>
+
+        <label for="engineSize">Engine Size:</label>
+        <input type="number" id="engineSize" name="engineSize" step="0.1" required>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+
+        <input type="submit" value="Add Record">
+    </form>
+    <div class="nav-links">
+        <a href="/">Home</a> | <a href="/list">View List</a>
+    </div>
+</body>
+</html>
